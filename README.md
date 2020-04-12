@@ -1,1 +1,1 @@
-# Human-Compute-Interaction
+# Human-Computer-Interaction
