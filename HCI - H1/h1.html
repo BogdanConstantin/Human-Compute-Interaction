@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Homework 1</title>
+        <link rel="stylesheet" href="h1.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body prefix="schema: http://schema.org">
+        <header>
+            <h1>HCI  Homework #1</h1>
+        </header>
+        <div role="contentinfo">
+            <ol role="directory">
+                <li> <a href="#abstract"><span>1.</span> Abstract</a></li>
+                <li> <a href="#introducere"><span>2.</span> Introduction</a></li>
+                <li> <a href="#context"><span>3.</span> Context of Use</a></li>
+                <li> <a href="#utilizatori"><span>4.</span> Main Audience</a></li>
+                <li> 
+                    <a href="#desktop"><span>5.</span>Desktop UI Design Patterns</a>
+                    <ol role="directory">
+                        <li> <a href="#infinit"><span>5.1</span> Infinite Scroll</a></li>
+                        <li> <a href="#hints"><span>5.2</span> Input Hints</a></li>
+                        <li> <a href="#validation"><span>5.3</span> Inline Validation</a></li>
+                        <li> <a href="#notifications"><span>5.4</span> Notifications</a></li>
+                        <li> <a href="#drag-and-drop"><span>5.5</span> Drag-and-drop</a></li>
+                    </ol>
+                </li>
+                <li> 
+                    <a href="#social"><span>6.</span> Design Patterns for Social Interactions</a>
+                    <ol role="directory">
+                        <li> <a href="#registration"><span>6.1</span> Sign-up and Registration</a></li>
+                        <li> <a href="#profile"><span>6.2</span> User Profile</a></li>
+                        <li> <a href="#avatar"><span>6.3</span> Avatars</a></li>
+                        <li> <a href="#labels"><span>6.4</span> Labels</a></li>
+                        <li> <a href="#social-objects"><span>6.5</span> Social Objects</a></li>
+                    </ol>
+                </li>
+                <li>
+                     <a href="#mobile"><span>7.</span> Mobile UI Design Patterns</a>
+                     <ol role="directory">
+                        <li> <a href="#bottom"><span>7.1</span> Bottom Navigation</a></li>
+                        <li> <a href="#splash"><span>7.2</span> Splash Screens</a></li>
+                        <li> <a href="#empty"><span>7.3</span> Empty States</a></li>
+                        <li> <a href="#custom"><span>7.4</span> Custom Tabs</a></li>
+                        <li> <a href="#drawer"><span>7.5</span> Drawer Menus</a></li>
+                        <li> <a href="#list/news"><span>7.6</span> Lists/News</a></li>
+                        <li> <a href="#comments"><span>7.7</span> Comments/Activity Feeds</a></li>
+                    </ol>
+                </li>
+                <li><a href="#empirical"><span>8.</span> Empirical Laws of Interaction</a></li>
+                <li><a href="#affordances"><span>9.</span> Affordances</a></li>
+                <li><a href="#flow"><span>10.</span> Flow</a></li>
+                <li><a href="#solutions"><span>11.</span> Better UI Design Solutions</a></li>
+            </ol>
+        </div>
+        <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+            <h2><span>1.</span> Abstract</h2>
+            <p>
+                In acest document voi vorbi despre contextul de utilizare, audienta principala si cel putin 5
+                modele de design UI traditionale, 5 modele de design pentru interactiuni sociale si 5 modele de
+                design de interfata mobila pentru interfata si interactiunea oferita utilizatorului de catre
+                site-ul Reddit pentru sectiunea de programming.
+            </p>
+        </section>
+        <section id="introducere" role="doc-introduction">
+            <h2><span>2.</span> Introduction</h2>
+            <p>
+                Reddit este un site si un forum de stiri sociale unde continutul este intretinut si promovat 
+                social de catre membrii site-ului prin vot. Numele site-ului este un joc de cuvinte care provine
+                din propozitia "I read it". Acesta a fost fondat in 2005 de colegii de camera de la Universitatea
+                din Virginia, <b>Steve Huffman</b> si <b>Alexis Ohanian</b>. Conform situatiei din august 2012,
+                Reddit opereaza ca o entitate independenta desi Advance este in continuare cel mai mare actionar
+                al acesteia. Sediul Reddit se afla in San Francisco, California.
+            </p>
+            <p>
+                Postarile sunt organizate dupa domeniul de interes, numite <i>subreddit</i>-uri. Acestea au tematici
+                diverse, cum ar fi stiri, jocuri, filme, muzica, carti, fitness sau alimente. Acele postari cu multe
+                voturi de apreciere apar in partea de sus ale acelei categorii si, daca primesc suficiente voturi, in
+                cele din urma apar pe prima pagina a site-ului.
+            </p>
+            <p>
+                In februarie 2018, Reddit a avut 542 de milioane de vizitatori lunar (234 milioane de utilizatori unici),
+                clasandu-se drept cel mai vizitat site din SUA și al 6-lea din lume, potrivit Alexa Internet, cu 57,4% de
+                utilizatori provenind din Statele Unite, urmat de Marea Britanie la 7,5% și Canada la 6,3%. În 2015, Reddit
+                a avut 82,54 miliarde de vizionari per pagina, 73,15 milioane de trimiteri, 725,85 milioane de comentarii
+                si 6,89 miliarde de voturi de la utilizatori.
+            </p>
+        </section>
+        <section id="context">
+            <h2><span>3.</span> Context of Use</h2>
+            <p>
+                Contextul de utilizare sunt conditiile reale in care este utilizat un produs software dat sau va fi utilizat
+                intr-o situatie normala de lucru de zi cu zi.
+            </p>
+            <p>
+                Cum am specificat si in capitolul de introducere, Reddit este un produs software care ofera cele mai recente
+                informatii in functie de ceea ce este interesat utilizatorul. In acest articol vom vorbi despre subreddit-ul 
+                <b>programming</b>. Utilizatorii care acceseaza aceasta comunitate au acces la cele mai noi informatii despre
+                programare, cum ar fi:
+                <ul>
+                    <li>Tehnologii - In cazul in care apare o noua tehnologie sau sunt adaugate anumite update-uri</li>
+                    <li>Conferinte - In cazul in care se organizeaza o conferinta pe o anumita tehnologie</li>
+                    <li>Videoclipuri - In cazul in care o persoana urmareste un videoclip interesant si vrea sa-l imparta si cu alte persoane</li>
+                </ul>
+            </p>
+        </section>
+        <section id="utilizatori">
+            <h2><span>4.</span> Main Audience</h2>
+            <p>
+                Reddit este al 5-lea cel mai utilizat site online, generand peste 168 de miliarde de vizualizari in fiecare an.
+                Pe langa diversitatea pe care o ofera, utilizatorii de pe aceasta aplicatie sunt foarte implicati, petrecand in
+                medie 16 minute pe site de fiecare data cand il viziteaza. Chiar daca platforma este diversa si poate avea subiecte
+                de interes si pentru barbati, cat si pentru femei, 2 treimi din utilizatori sunt barbati.
+            </p>
+            <img src="gender.png">
+            <p>
+                Aceasta statistica se potriveste si pentru comunitatea de <b>programming</b> care de pe data de 28 februarie 2006,
+                atunci cand a fost infiintata, s-au inscris peste 2.5 milioane de utilizatori. 
+            </p>
+            <p>
+                Reddit este utilizat in proportie de 45% de persoane cu varste cuprinse intre 25 si 34 de ani, ceea ce reprezinta
+                aproape jumatate din comunitatea acestui produs software, desi cei cu varsta cuprinsa intre 30 si 49 de ani alcatuiesc
+                aproximativ o treime dintre utilizatorii site-ului. Acest lucru inseamna ca o postare poate fi vizata cu succes
+                pentru adolescenti, cat si adulti de varsta mijlocie.
+            </p>
+        </section>
+        <section id="desktop">
+            <h2><span>5.</span>Desktop UI Design Patterns</h2>
+            <p>
+                <b>User Interface Design Patterns</b> sunt solutii recurente care rezolva probleme comune de proiectare. Design patterns
+                sunt puncte de referinta standard pentru designer-ul de User Interface experimentat.
+            </p>
+            <section id="infinit">
+                <h3><span>5.1</span> Infinite scroll</h3>
+                <p>
+                    Unul dintre cele mai folosite design pattern este acela de scroll infinit. Este folosit de asemenea si pe Reddit, mai
+                    exact pe pagina principala a unui subreddit, acolo unde utilizatorul poate vedea cele mai recente si populare postari.
+                    Utilizatorului ii vor aparea pe ecran cateva postari, iar cu cat acesta va da scroll i se vor incarca alte postari
+                    publicate cu ceva timp in urma sau mai putin populare.
+                </p>
+            </section>
+            <section id="hints">
+                <h3><span>5.2</span> Input hints</h3>
+                <img src="hints.PNG">
+                <p>
+                    Acest design pattern il poate ajuta pe utilizator in diferite situati in care est confuz despre cum ar trebui sa completeze
+                    un anumit formular. Cele mai des intalnite utilizari pentru acest design pattern sunt intalnite la completarea adresei de
+                    email, unde este sugerata o adresa email valida. In cadrul aplicatiei Reddit, atunci cand un utilizator doreste sa isi creeze
+                    un cont nou i se sugereaza anumite sugestii pentru campul <b>nume de utilizator</b>, ca in imaginea de mai sus, iar pentru
+                    <b>parola</b> de asemenea, utilizatorul poate alege o parola puternica care ii este sugerata. 
+                </p>
+            </section>
+            <section id="validation">
+                <h3><span>5.3</span> Inline validation</h3>
+                <img src="validation.PNG">
+                <p>
+                    Probabil unul dintre cele mai intalnite design pattern de catre utilizator este acela al validarilor atunci cand completeaza
+                    un formular. Acele mesaje il ajuta pe utilizator sa inteleaga cum ar trebui sa completeze anumite campuri pentru a finaliza
+                    cu succes introducerea anumitor date. In imaginea de mai sus se poate vedea ca in momentul in care un utilizator doreste sa
+                    isi creeze un cont i se specifica in ce limita de lungime ar trebui sa fie <b>numele de utilizator</b>, acelasi lucru 
+                    si pentru <b>parola</b>, dar in plus pentru aceasta se specifica si cat de puternica este.    
+                </p>
+            </section>
+            <section id="notifications">
+                <h3><span>5.4</span> Notifications</h3>
+                <img src="notification.png">
+                <p>
+                    Notificarile sunt o modalitate foarte des intalnita de instiintare a unui utilizator atunci cand se intampla ceva nou in
+                    legatura cu profilul acestuia sau cu anumite chestii de care acesta ar putea fi interesat. Si pe Reddit este aceasta functionalitate,
+                    care poate fi accesata prin apasarea inconitei <i>plic</i> din interiorul patratului rosu. In general aceste notificari sunt 
+                    informatii legate de contul utilizatorului, anumite postari care au ajuns populare recent sau diferite mesaje pe care acesta le 
+                    poate primi de la alte persoane care folosesc aplicatia. 
+                </p>
+            </section>
+            <section id="drag-and-drop">
+                <h3><span>5.5</span> Drag-and-drop</h3>
+                <img src="drag-and-drop.PNG">
+                <p>
+                    Functionalitatea de <i>drag and drop</i> este intalnita in aplicatiile in care utilizatorul are posibilitatea sa incarce anumite
+                    fisiere, cel mai des fiind imaginile. Aceasta este utila deoarece utilizatorul poate avea la dispozitie fisierul pe care vrea sa 
+                    il incarce si este mai rapida modalitatea <i>drag and drop</i> decat functia de <i>browse</i> prin care acesta trebuie sa caute
+                    fisierul mai intai. Aceasta functionalitate se gaseste si in aplicatia Reddit atunci cand doresti sa iti modifici profilul si sa 
+                    adaugi o imagina pentru avatarul profilului, cum se poate vedea in imaginea anterioara.
+                </p>
+            </section>
+        </section>
+        <section id="social">
+            <h2><span>6.</span> Design Patterns for Social Interactions</h2>
+            <p>
+                Aceste design patterns ajuta la descrierea comportamentului uman pe o anumita aplicatie software si cum acesta poate interactiona cu
+                alte persoane, in cazul nostru, prin intermediul aplicatiei Reddit.
+            </p>
+                <section id="registration">
+                    <h3><span>6.1</span> Sign-up and Registration</h3>
+                    <img src="sign-up.PNG">
+                    <p>
+                        Spre deosebire de alte aplicatii, Reddit iti ofera posibilitatea de a accesa anumite grupuri si postarile acesteia fara ca 
+                        utilizatorul sa fie inregistrat. De exemplu, eu am putut accesa postarile subreddit-ul de <b>programming</b> fara sa fiu
+                        autentificat. Dar, pentru a te putea inscrie intr-un subreddit, pentru a crea o postare si multe alte posibilitati este
+                        necesarea crearea unui cont. In Reddit acest lucru se realiza prin apasarea butonului <i>Sign up</i> conform imaginii de mai 
+                        sus, apoi utilizatorul este nevoit sa completeze putine date despre acesta: emailul, o parola si numele de utilizator.
+                    </p>
+                </section>
+                <section id="profile">
+                    <h3><span>6.2</span> User Profile</h3>
+                    <img src="profile.PNG">
+                    <p>
+                        Profilul, sau <i>fata</i> utilizatorului in aplicatie este o locatie unde sunt afisate cele mai relevante informatii despre
+                        un utilizator care sunt expuse si celorlalti care folosesc aplicatia. Aplicatia ar trebui sa ceara doar minimul necesar pe 
+                        care il are nevoie de utilizator pentru activitatile sau relatiile dintre utilizatori. Utilizatorul ar trebui sa aiba posibilitatea
+                        de a face schimbari asupra informatiilor profilului pe care il detine.
+                    </p>
+                    <p>
+                        Dupa cum se poate vedea in imaginea precedenta, Reddit ofera posibilitatea persoanelor autentificate sa vizualizeze profilul pe
+                        care il detin. Acestia pot vedea anumite informatii, precum numele de utilizator, ziua cand s-au inscris, postarile pe care le-au 
+                        facut pana in acel moment, premii primite si multe alte date obtinute pe baza interactiunii acestuia cu diferite postari. 
+                    </p>
+                </section>
+                <section id="avatar">
+                    <h3><span>6.3</span> Avatars</h3>
+                    <img src="avatar.PNG">
+                    <p>
+                        Avatarele ofera o reprezentare vizuala pentru ca o persoana sa fie recunoscuta si de catre alti utilizatori. Dupa cum se poate
+                        vedea, si in Reddit este posibil acest lucru prin accesarea paginii de editarea profilului unde se poate incarca o imagine pe
+                        baza careia acesta va fi identificat. 
+                    </p>
+
+                </section>
+                <section id="labels">
+                    <h3><span>6.4</span> Labels</h3>
+                    <img src="labels.PNG">
+                    <p>
+                        Probabil unul dintre cele mai dorite lucruri de catre o persoana care foloseste o aplicatie software care presupune interactiunea
+                        cu alte persoane este de a deveni cunoscut printre acestia. Aceasta poate fi aratata prin anumite premii pe care persoana le 
+                        primeste sau cu ajutorul unui clasament vizibil pentru toti utilizatorii prin care se poata observa activitatea de calitate pe care
+                        acesta o depune.
+                    </p>
+                    <p>
+                        Reddit afiseaza astfel de clasamente, dar pentru un specific subreddit care este si el incadrat intr-o anumita categorie. Utilizatorii
+                        pot fi motivati pe baza acestui clasament, pentru ca subreddit-ul in care contribuie sa fie recunoscut. De asemenea, in functie de
+                        activitatea acestora, acestia primesc <b>Reddit Coins</b> pe care le pot folosi in cadrul aplicatiei.
+                    </p>
+                </section>
+                <section id="social-objects">
+                    <h3><span>6.5</span> Social Objects</h3>
+                    <img src="social-objects.PNG">
+                    <p>
+                        In cadrul aplicatiilor care vor sa promoveze interactiunea dintre utilizatori, acestea trebuie sa ofere posibilitatea de creare a
+                        anumitor subiecte de discutie. Reddit a fost implementat pentru a promova aceste subiecte care sa conecteze oamenii. Un utilizator 
+                        va crea o postare intr-un subreddit, iar ceilalti au posibilitatea de o aprecia pentru a deveni cunoscuta, de a adauga comentarii, de 
+                        a acorda permii, sau de a o distribui si salva. 
+                    </p>
+                </section>
+        </section>
+        <section id="mobile">
+            <h2><span>7.</span> Mobile UI Design Patterns</h2>
+            <section id="bottom">
+                <h3><span>7.1</span> Bottom Navigation</h3>
+                <img class="mobile-image" src="bottom.png">
+                <p>
+                    Bara de navigare din partea de jos afiseaza trei pana la cinci destinatii in partea de jos a ecranului. Fiecare destinatie este
+                    reprezentata de o pictograma si o eticheta text optionala. Cand o pictograma de navigare este apasata, utilizatorul este dus la
+                    destinatia de navigare de nivel superios asociata pictogramei respective.
+                </p>
+                <p>
+                    Acest pattern se regaseste si in aplicatia mobila a celor de la Reddit. In partea de jos se afla cinci pictograme, fiecare cu un anumit scop de
+                    a naviga catre pagina principala, catre un anumit subreddit, catre pagina de unde utilizatorul poate posta, catre cea de chat si ultima catre
+                    pagina de notificari.
+                </p>
+            </section>
+            <section id="splash">
+                <h3><span>7.2</span> Splash Screens</h3>
+                <img class="mobile-image" src="splash.jpg">
+                <p>
+                    Un splash screen este un ecran care apare cand utilizatorul deschide o aplicatie pe dispozitivul mobil. Uneori, se numeste ecran de 
+                    lansare sau ecran de pornire si apare atunci cand aplicatia se incarca dupa ce tocmai ai deschis-o. Deobicei aceste ecrane ar trebui sa 
+                    aiba un design simplu alcatuit dintr-un background si logo-ul acelei aplicatii ca si in imaginea anterioara.
+                </p>
+            </section>
+            <section id="empty">
+                <h3><span>7.3</span> Empty States</h3>
+                <img class="mobile-image" src="empty.jpg">
+                <p>
+                    Empty states sunt momente din experienta unui utilizator cu un produs software in care nu este nimic de afisat. Prima utilizare, fara
+                    rezultate sau erori sunt trei dintre cele mai comune tipuri de stari goale. Acestea sunt folosite pentru a instiinta persoana ca nu a 
+                    efectuat nicio actiune in cadrul acelei pagini. Aceste pagini au deobicei o imagine amuzanta insotite de un text, un exemplu se poate 
+                    regasi si mai sus unde aplicatia Reddit ma instiinteaza ca nu am efectuat postari pana in momentul actual.
+                </p>
+            </section>
+            <section id="custom">
+                <h3><span>7.4</span> Custom Tabs</h3>
+                <img class="mobile-image" src="custom.jpg">
+                <p>
+                    Custom tabs sunt taburile care se regasesc in majoritatea cazurilor in partea de sus a ecranului mobil si ofera o navigare rapida catre
+                    diferite parti ale aplicatiei. Dupa cum se poate vedea acestea au un design simplu si sunt alcatuite dintr-un text, iar tab-ul selectat
+                    are marginea de jos colorata. In aplicatia mobila Reddit, taburile se regasesc in functie de categorie aleasa din partea de jos a ecranului.
+                </p>
+            </section>
+            <section id="drawer">
+                <h3><span>7.5</span> Drawer Menus</h3>
+                <img class="mobile-image" src="drawer.jpg">
+                <p>
+                    Drawer Menu este un panou UI care afiseaza meniul principal de navigare al aplicatiei. Sertarul apare cand utilizatorul atinge pictograma
+                    in bara de aplicatii sau cand acesta gliseaza cu degetul de pe marginea stanga a ecranului spre dreapta. Aceasta pictograma ar trebuie sa
+                    fie afisata pe toate paginile de nivel superior ale aplicatiei.
+                </p>
+                <p>
+                    Reddit foloseste acest menu pentru a arata utilizatorilor informatii despre profilul pe care il detin si le ofera ocazia sa navigheze spre
+                    pagina de setari sau de editare a profilului.
+                </p>
+            </section>
+            <section id="list/news">
+                <h3><span>7.6</span> List/News</h3>
+                <img class="mobile-image" src="list.jpg">
+                <p>
+                    Acest pattern este utilizat atunci cand aplicatia doreste sa ofere persoanelor care o folosesc o pagina cu toate informatiile pe care
+                    acestia doresc sa le afle. Cum Reddit este o aplicatie pentru diverse postari de interes la care se poate adauga comentarii, acesta este un
+                    design pattern care nu putea lipsa, afisand intr-o lista toate evenimentele populare si recente.
+                </p>
+            </section>
+            <section id="comments">
+                <h3><span>7.7</span> Comments/Activity Feeds</h3>
+                <img class="mobile-image" src="comments.jpg">
+                <p>
+                   Comentariile permit o discutie asupra unei entitati, cum ar fi o pagina, o postare de pe un blog si multe altele. In functie de context,
+                   discutiile pot fi intre orice combinatie de autori, contribuitori si cititori. Patternul de comentarii consta dintr-un flux de activitati 
+                   de comentarii postate, combinat cu o o zona tip <i>textarea</i> pentru a permite utilizatorului curent sa trimita un comentariu (daca au 
+                   permisiunile necesare).
+                </p>
+            </section>
+        </section>
+        <section id="empirical">
+            <h2><span>8.</span>Empirical laws of interaction</h2>
+            <p>
+                Legea lui Fitts este un model predictiv al miscarii umane utilizat in primul rand in interactiunea om calculator. Aceasta lege stiintifica
+                prevede ca timpul necesar pentru a se deplasa rapid intr-o zona tinta este o functie a raportului dintre distanta fata de tinta si latimea
+                tintei. In urma interactiunii mele cu aplicatia Reddit, pot spune ca designul respecta aceasta lege. Ca exemplu pot specifica ca la autentificare 
+                butonul de <b>sign in</b> are o latime corespunzatoare si se afla imediat sub formular sau butonul de <b>Create Post</b> este fix langa lista de 
+                postari din cadrul unui subreddit.
+            </p>
+            <p>
+                Legea lui Hick este un principiu psihologic care precizeaza ca, cu cat o persoana are mai multe optiuni, cu atat va dura o decizie cu privire la
+                ce optiune este cea mai buna. Este adesea folosita in proiectarea experientei utilizatorului. Aplicatia Reddit se ocupa cu distribuirea de postari
+                pe anumite subiecte numite subreddit-uri, deci daca un utilizator stie in ce subiecte este interesat acesta nu va fi influentat si de alte optiuni
+                si poate fi focusat doar pe acele postari.
+            </p>
+            <p>
+                Legea directoare în interacțiunea om-calculator și ergonomie este un model predictiv al mișcării umane care descrie timpul necesar pentru a naviga
+                sau a conduce, printr-un tunel bidimensional. Din experienta mea cu aceasta aplicatia nu am regasit un tunel care sa dureze o perioada lunga de timp
+                pentru a ajunge pe pagina pe care o cautam. Deci pot spune ca aceasta aplicatie respecta cele trei legi empirice.
+            </p>
+        </section>
+        <section id="affordances">
+            <h2><span>9.</span>Affordances</h2>
+            <p>
+                Acestea reprezinta indicii despre modul in care trebuie utilizat un obiect, furnizat in mod obisnuit de obiectul insusi sau de contextul sau. De
+                exemplu, chiar daca nu ati vazut niciodata o cana de cafea, utilizarea ei este desul de naturala. Manerul este format pentru a prinde usor, iar vasul
+                are o deschidere mare in partea superioara, cu un put gol in interior.
+            </p>
+            <p>
+                Aplicatia Reddit este una destul de predictiva pentru un utilizator care a interactionat si cu alte aplicatii software, dupa acea inregistrare clasica,
+                utilizatorul vede o lista de postari populare si alte butoane care il pot ajuta sa navigheze spre alte zone despre care ar putea fi interesat.
+            </p>
+        </section>
+        <section id="flow">
+            <h2><span>10.</span>Flow</h2>
+            <p>
+                Este reprezentat de starea mentala pe care o simte utilizatorul atunci este total implicat intr-o anumita activitate. Conform statisticilor pe care
+                le-am specificat la inceputul acestui articol, un utilizator petrece in medie 16 minute atunci cand acceseaza aplicatia ceea ce ne face sa intelegem ca 
+                un utilizator are o stare mentala pozitiva atunci cand <i>rasfoieste</i> prin stirile subreddit-ului.
+            </p>
+        </section>
+        <section id="solutions">
+            <h2><span>11.</span>Better UI Design Solutions</h2>
+            <img class="desktop-image" src="solutions.PNG">
+            <p>
+                In perioada scurta de cand navighez prin aplicatia Reddit pot spune ca am gasit o problema din punctul meu de vedere. Daca selectezi modul intunecat si
+                te deloghezi de pe aplicatie si deschizi formularul de <b>login</b> din nou, acesta are o tema luminoasa si poate fi deranjanta pentru un utilizator care a 
+                ales acest mod. Solutia mea ar fi ca atunci cand este selectat modul intunecat, formularul sa aiba si el un aspect diferit.
+            </p>
+        </section>
+    </body>
+</html>
